@@ -5,19 +5,31 @@ using UnityEngine;
 public class ModelAnimations : MonoBehaviour
 {
     // Start is called before the first frame update
-    private Animator mAnimator;
 
-    private void Start()
+    public GameObject CharacterModel;
+
+    private void ExecuteTriggerFromUI(string trigger)
     {
-        mAnimator = GetComponent<Animator>();
-        if (mAnimator != null)
+        if (CharacterModel != null)
         {
-            mAnimator.SetTrigger("TrHouse");
+            var animator = CharacterModel.GetComponent<Animator>();
+            if(animator != null)
+            {
+                animator.SetTrigger(trigger);
+            }
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DanceTheMacarena()
     {
+        ExecuteTriggerFromUI("TrMacarena");
+    }
+    public void DanceTheHouse()
+    {
+        ExecuteTriggerFromUI("TrHouse");
+    }
+    public void DanceTheHipHop()
+    {
+        ExecuteTriggerFromUI("TrHipHop");
     }
 }
