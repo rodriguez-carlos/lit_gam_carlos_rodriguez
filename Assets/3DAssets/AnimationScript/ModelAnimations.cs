@@ -30,16 +30,19 @@ public class ModelAnimations : MonoBehaviour
     {
         ExecuteTriggerFromUI("TrMacarena");
         FormatAdvanceButton("The Macarena");
+        MainManager.Instance.SelectedDance = "Macarena";
     }
     public void DanceTheHouse()
     {
         ExecuteTriggerFromUI("TrHouse");
         FormatAdvanceButton("House");
+        MainManager.Instance.SelectedDance = "House";
 
     }
     public void DanceTheHipHop()
     {
         ExecuteTriggerFromUI("TrHipHop");
         FormatAdvanceButton("Hip Hop");
+        MainManager.Instance.SelectedDance = "HipHop";
     }
 }

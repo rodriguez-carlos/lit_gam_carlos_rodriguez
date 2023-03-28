@@ -990,7 +990,7 @@ GameObject:
   - component: {fileID: 825574575}
   - component: {fileID: 825574578}
   m_Layer: 5
-  m_Name: Button_Option1
+  m_Name: ButtonMacarena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1434,7 +1434,7 @@ GameObject:
   - component: {fileID: 1387880323}
   - component: {fileID: 1387880326}
   m_Layer: 5
-  m_Name: Button_Option1 (3)
+  m_Name: ButtonAdvance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1611,7 +1611,7 @@ GameObject:
   - component: {fileID: 1642826350}
   - component: {fileID: 1642826353}
   m_Layer: 5
-  m_Name: Button_Option1 (2)
+  m_Name: ButtonHipHop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1802,7 +1802,7 @@ GameObject:
   - component: {fileID: 1779029604}
   - component: {fileID: 1779029607}
   m_Layer: 5
-  m_Name: Button_Option1 (1)
+  m_Name: ButtonHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
