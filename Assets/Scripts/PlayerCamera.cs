@@ -8,6 +8,7 @@ public class PlayerCamera : MonoBehaviour
     public float yAxisSensitivity;
 
     public Transform playerOrientation;
+    public Transform cameraHolder;
 
     float xRotation;
     float yRotation;
@@ -29,7 +30,7 @@ public class PlayerCamera : MonoBehaviour
         xRotation -= yAxisMouse;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+        cameraHolder.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         playerOrientation.rotation = Quaternion.Euler(0, yRotation, 0);
 
 
