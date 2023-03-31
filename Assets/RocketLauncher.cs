@@ -10,14 +10,18 @@ public class RocketLauncher : MonoBehaviour
 
     private GameObject newMissile;
 
+    public RocketLauncherData rocketLauncherData;
+
     public void Update()
     {
         if (Input.GetMouseButtonDown(1))
         {
+            if (newMissile != null)
+                Destroy(newMissile);
+            
             newMissile = Instantiate(MissilePrefab, spawnPoint.position, spawnPoint.rotation);
 
             newMissile.transform.parent = gameObject.transform;
-
         }
 
         if (Input.GetMouseButtonDown(0))
@@ -25,8 +29,9 @@ public class RocketLauncher : MonoBehaviour
             if(newMissile != null)
             {
                 var missileRb = newMissile.AddComponent<Rigidbody>();
-
-                missileRb.AddForce(new Vector3(spawnPoint.rotation.x, spawnPoint.rotation.y) * 1000f, ForceMode.Force);
+                missileRb.isKinematic = false;
+                Vector3 forceDirection = spawnPoint.right * rocketLauncherData.range;
+                missileRb.AddForce(forceDirection, ForceMode.Impulse);
                 Destroy(newMissile, 3);
             }
         }
